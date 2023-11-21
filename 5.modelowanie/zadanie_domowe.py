@@ -55,7 +55,7 @@ print(df.describe())
 
 plt.hist(df['academic_performance'], bins=[0,1,2,3,4,5,6], alpha=0.7, align='left', color='blue')
 plt.hist(df['future_career_concerns'], bins=[0,1,2,3,4,5,6], alpha=0.7, align='left', color='green')
-plt.plot()
+plt.show()
 
 # zmienne mają podobny układ, bardzo mało odpowiedzi na 0, 3,4,5 niemal się pokrywają, różnica pojawia się w ocenach 1 i 2
 # jakość nauczania najczęściej była oceniana na 2 (trochę źle)
@@ -93,7 +93,7 @@ print(model.summary())
 df['future_career_concerns_pred'] = model.predict().round()
 plt.hist(df['future_career_concerns_pred'], bins=[1,2,3,4,5,6], alpha=0.7, align='left', color='red')
 plt.hist(df['future_career_concerns'], bins=[1,2,3,4,5,6], alpha=0.7, align='left', color='blue')
-plt.plot()
+plt.show()
 
 # Model ma problemy z rozróżnieniem odpowiedzi 3 (postawa neutralna wobec przyszłości ze wskazaniem na brak obaw) a 4
 # (duża lub bardzo duża obawa o przyszłość zawodową).
